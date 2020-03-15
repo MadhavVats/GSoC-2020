@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {max-width: 200px;}
+    </style>
+</head>
+<body>
+    <div class="form-row align-items-center" style="margin-left: 2em;">
+    <div class="col-auto" style="margin-top: 1.5em;">
+        <form action="/search/" method="post">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">Name</label>
+                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Search" name="search">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              </div>
+            </div>
+          </form>
+    </div>
+    <div class="dropdown show col-auto" style="margin-top: 1.115em;">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sort by
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <form action="/ViewCount/" method="post">
+                    <button name="forwardBtn" type="submit" class="btn btn-light">Veiwcount</button>
+                </form>
+                <form action="/score/" method="post">
+                    <button name="forwardBtn" type="submit" class="btn btn-light">Score</button>
+                </form>              
+                <form action="/" method="post">
+                    <button name="forwardBtn" type="submit" class="btn btn-light">Latest</button>
+                </form> 
+            </div>
+    </div>
+    </div>
+    </div>
+    <div style="padding: 2em; height: 100%;">
+        {{table}}
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
