@@ -3,7 +3,7 @@ import pandas as pd
 from flask import Flask, render_template, Response, request, redirect, url_for,Markup,request
 conn = sqlite3.connect('cv.db')  
 c = conn.cursor()
-c.execute('''SELECT * FROM cv_posts ORDER BY CreationDate DESC LIMIT''')
+c.execute('''SELECT * FROM cv_posts ORDER BY CreationDate DESC LIMIT 10''')
 query=c.fetchall()
 def get_table_html(query):
    if not query:
