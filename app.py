@@ -12,7 +12,7 @@ for i in range(len(query)):
 print(len(body_dict),len(df['Body'][0]))
 conn = sqlite3.connect('cvlinks.db')  
 c = conn.cursor()
-c.execute('''SELECT * FROM cv_posts ORDER BY CreationDate DESC LIMIT 10''')
+c.execute('''SELECT * FROM cv_posts ORDER BY CreationDate DESC''')
 query=c.fetchall()
 def get_table_html(query):
    if not query:
